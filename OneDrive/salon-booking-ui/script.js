@@ -1,16 +1,32 @@
+// DARK MODE TOGGLE
 let modeBtn = document.getElementById("modeBtn");
 
-modeBtn.addEventListener("click", function() {
+if (modeBtn) {
+    modeBtn.addEventListener("click", function() {
 
-    document.body.classList.toggle("dark-mode");
+        document.body.classList.toggle("dark-mode");
 
-    // Change button text
-    if (document.body.classList.contains("dark-mode")) {
-        modeBtn.innerText = "☀ Light Mode";
-    } else {
-        modeBtn.innerText = "🌙 Dark Mode";
-    }
+        // Change button text
+        if (document.body.classList.contains("dark-mode")) {
+            modeBtn.innerText = "☀ Light Mode";
+        } else {
+            modeBtn.innerText = "🌙 Dark Mode";
+        }
 
-});
+    });
+}
+
+// BOOKING FORM HANDLING
+let form = document.getElementById("bookingForm");
+let result = document.getElementById("result");
+
+if (form) {
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        result.innerText = "Thank you! We will contact you soon.";
+        form.reset();
+    });
+}
 
 console.log("JavaScript Connected Successfully!");
