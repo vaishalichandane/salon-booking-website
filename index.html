@@ -5,62 +5,110 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-inverse custom-navbar">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Glow Salon</a>
     </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#" id="modeBtn">🌙 Dark Mode</a></li>
+    </ul>
   </div>
 </nav>
 
-<div class="container text-center">
+<!-- HERO -->
+<div class="jumbotron text-center hero-section">
   <h1>Glow Salon & Beauty Studio</h1>
-  <p>Experience luxury beauty care from professionals</p>
+  <p>Luxury beauty services with expert care</p>
+  <a href="booking.html" class="btn btn-warning btn-lg">Book Appointment</a>
+</div>
 
-  <a href="booking.html" class="btn btn-warning">
-    Book Appointment
-  </a>
+<!-- SERVICES -->
+<div class="container text-center" id="services">
+  <h2>Our Beauty Services</h2>
+  <div class="row">
+
+    <div class="col-sm-4">
+      <div class="service-box">
+        <i class="fa-solid fa-scissors fa-2x"></i>
+        <h3>Hair Styling</h3>
+        <p>Modern haircuts & styling</p>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="service-box">
+        <i class="fa-solid fa-spa fa-2x"></i>
+        <h3>Facial & Skin Care</h3>
+        <p>Advanced glowing skin treatment</p>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="service-box">
+        <i class="fa-solid fa-heart fa-2x"></i>
+        <h3>Makeup</h3>
+        <p>Bridal & party makeup</p>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <!-- CONTACT -->
-<div class="container text-center" style="margin-top:50px;">
+<div class="container text-center contact-section" id="contact">
   <h2>Contact Us</h2>
 
   <p><strong>Phone:</strong> 9876543210</p>
   <p><strong>Email:</strong> glowsalon@gmail.com</p>
   <p><strong>Location:</strong> Pune, India</p>
 
-  <!-- NETLIFY FORM -->
-  <form id="contactForm" name="contact" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="contact">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
 
-    <div class="form-group">
-      <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+      <form id="contactForm" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+
+        <input type="text" name="name" class="form-control" placeholder="Your Name" required><br>
+        <input type="email" name="email" class="form-control" placeholder="Your Email" required><br>
+        <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea><br>
+
+        <button type="submit" class="btn btn-warning btn-block">Send Message</button>
+      </form>
+
+      <h3 id="contactResult"></h3>
+
+      <p>Or WhatsApp: <a href="https://wa.me/919876543210">Click here</a></p>
+
     </div>
-
-    <div class="form-group">
-      <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-    </div>
-
-    <div class="form-group">
-      <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
-    </div>
-
-    <button type="submit" class="btn btn-warning btn-block">
-      Send Message
-    </button>
-  </form>
-
-  <h3 id="contactResult" class="text-center" style="margin-top:20px;"></h3>
+  </div>
 </div>
 
-<script src="./script.js"></script>
+<!-- FOOTER -->
+<footer class="footer text-center">
+  <p>© 2026 Glow Salon | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
