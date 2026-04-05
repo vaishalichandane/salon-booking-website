@@ -31,6 +31,10 @@
       <li><a href="booking.html">Book Now</a></li>
       <li><a href="#contact">Contact</a></li>
 
+      <!-- DARK MODE BUTTON -->
+      <li>
+        <a href="#" id="modeBtn">🌙 Dark Mode</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -45,7 +49,7 @@
   </a>
 </div>
 
-<!-- ABOUT US SECTION -->
+<!-- ABOUT US -->
 <div class="container text-center about-section">
   <h2>About Us</h2>
   <p class="text-muted">
@@ -55,7 +59,6 @@
   </p>
 
   <div class="row" style="margin-top:30px;">
-
     <div class="col-sm-4">
       <i class="fa-solid fa-scissors about-icon"></i>
       <h4>Expert Stylists</h4>
@@ -73,11 +76,10 @@
       <h4>Customer First</h4>
       <p>Your satisfaction is our top priority</p>
     </div>
-
   </div>
 </div>
 
-<!-- SERVICES SECTION -->
+<!-- SERVICES -->
 <div class="container text-center" id="services">
   <h2>Our Beauty Services</h2>
   <p class="text-muted">
@@ -85,7 +87,6 @@
   </p>
 
   <div class="row" style="margin-top:30px;">
-
     <div class="col-sm-4">
       <div class="service-box">
         <h3>Hair Styling</h3>
@@ -106,38 +107,45 @@
         <p>Party, bridal and professional makeup</p>
       </div>
     </div>
-
   </div>
 </div>
-<!-- CONTACT SECTION -->
+
+<!-- CONTACT -->
 <div class="container text-center contact-section" id="contact">
   <h2>Contact Us</h2>
   <p class="text-muted">
     Have questions or want to book an appointment? Get in touch with us.
   </p>
 
+  <p><strong>Phone:</strong> 9876543210</p>
+  <p><strong>Email:</strong> glowsalon@gmail.com</p>
+  <p><strong>Location:</strong> Pune, India</p>
+
   <div class="row" style="margin-top:30px;">
     <div class="col-sm-6 col-sm-offset-3">
 
-      <form>
+      <form id="contactForm">
 
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Your Name">
+          <input type="text" class="form-control" placeholder="Your Name" required>
         </div>
 
         <div class="form-group">
-          <input type="email" class="form-control" placeholder="Your Email">
+          <input type="email" class="form-control" placeholder="Your Email" required>
         </div>
 
         <div class="form-group">
-          <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+          <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
         </div>
 
-        <button class="btn btn-warning btn-block" disabled>
-          Send Message (Backend Later)
+        <button type="submit" class="btn btn-warning btn-block">
+          Send Message
         </button>
 
       </form>
+
+      <!-- SUCCESS MESSAGE -->
+      <h3 id="contactResult" class="text-center" style="margin-top:20px;"></h3>
 
     </div>
   </div>
@@ -150,6 +158,9 @@
     <p>Designed using HTML, CSS & Bootstrap</p>
   </div>
 </footer>
+
+<!-- JAVASCRIPT -->
+<script src="./script.js"></script>
 
 </body>
 </html>
