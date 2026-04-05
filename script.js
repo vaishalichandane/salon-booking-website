@@ -30,3 +30,14 @@ if (form) {
 }
 
 console.log("JavaScript Connected Successfully!");
+// CONTACT FORM
+let contactForm = document.getElementById("contactForm");
+let contactResult = document.getElementById("contactResult");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        contactResult.innerText = "Message sent successfully!";
+        contactForm.reset();
+    });
+}
