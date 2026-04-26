@@ -3,7 +3,8 @@
 }
 /* ---------- HERO SECTION ---------- */
 .hero-section {
-  background-color: #e91e63;
+ .hero-section {
+  background-color: #e91e63 !important;
   color: white;
   padding: 60px 20px;
 

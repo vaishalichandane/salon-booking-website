@@ -5,41 +5,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-inverse custom-navbar">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="index.html">Glow Salon</a>
     </div>
-
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html#services">Services</a></li>
-      <li class="active"><a href="booking.html">Book Now</a></li>
-
-      <!-- DARK MODE BUTTON -->
-      <li>
-        <a href="#" id="modeBtn">🌙 Dark Mode</a>
-      </li>
-    </ul>
   </div>
 </nav>
 
-<!-- BOOKING FORM -->
 <div class="container">
   <h2 class="text-center">Book an Appointment</h2>
   <p class="text-center">Fill the form below</p>
 
-  <!-- CONTACT INFO -->
   <p class="text-center">
     Call us: 9876543210 | Pune, India
   </p>
@@ -47,66 +30,52 @@
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
 
-      <form id="bookingForm">
+      <!-- NETLIFY FORM -->
+      <form id="bookingForm" name="booking" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="booking">
 
         <div class="form-group">
           <label>Full Name</label>
-          <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+          <input type="text" name="name" class="form-control" required>
         </div>
 
         <div class="form-group">
           <label>Mobile Number</label>
-          <input type="tel" id="mobile" class="form-control" placeholder="Enter mobile number" required>
+          <input type="tel" name="mobile" class="form-control" required>
         </div>
 
         <div class="form-group">
           <label>Select Service</label>
-          <select id="service" class="form-control" required>
+          <select name="service" class="form-control" required>
             <option value="">Select Service</option>
-            <option value="Haircut">Haircut</option>
-            <option value="Facial">Facial</option>
-            <option value="Makeup">Makeup</option>
+            <option>Haircut</option>
+            <option>Facial</option>
+            <option>Makeup</option>
           </select>
         </div>
 
         <div class="form-group">
           <label>Appointment Date</label>
-          <input type="date" id="date" class="form-control" required>
+          <input type="date" name="date" class="form-control" required>
         </div>
 
         <button type="submit" class="btn btn-success btn-block">
           Confirm Booking
         </button>
 
-        <!-- TRUST MESSAGE -->
         <p class="text-center" style="margin-top:10px;">
           We will contact you shortly to confirm your appointment.
         </p>
 
       </form>
 
-      <!-- WHATSAPP OPTION -->
-      <p class="text-center">
-        Or WhatsApp us: <a href="https://wa.me/919876543210">Click here</a>
-      </p>
-
-      <!-- SUCCESS MESSAGE -->
       <h3 id="result" class="text-center" style="margin-top:20px;"></h3>
 
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
-<footer class="footer text-center">
-  <div class="container">
-    <p>© 2026 Glow Salon | All Rights Reserved</p>
-    <p>Designed using HTML, CSS & Bootstrap</p>
-  </div>
-</footer>
-
-<!-- JAVASCRIPT -->
-<script src="script.js"></script>
+<script src="./script.js"></script>
 
 </body>
 </html>
